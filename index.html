@@ -22,7 +22,6 @@
   </header>
 
   <main>
-
     <section class="account-panel" aria-labelledby="account-title">
       <div class="account-heading"><p class="eyebrow">CUSTOMER ACCOUNT</p><h2 id="account-title">Sign in or create an account</h2></div>
       <form id="account-form" class="account-form">
@@ -36,6 +35,15 @@
       <div id="account-signed-in" hidden><p>Signed in as <strong id="account-user"></strong></p><button id="account-logout" type="button">Sign out</button></div>
       <p id="account-status" class="account-status" role="status" aria-live="polite"></p>
     </section>
+
+    <section id="customer-dashboard" class="dashboard" hidden aria-labelledby="dashboard-title">
+      <div class="dashboard-heading"><p class="eyebrow">MY SAMMART</p><h2 id="dashboard-title">Customer Dashboard</h2><p>Welcome to your customer account.</p></div>
+      <div class="dashboard-grid">
+        <article class="dashboard-card"><span class="dashboard-icon">👤</span><h3>My Profile</h3><p id="dashboard-email" class="dashboard-email"></p><small>Your signed-in email address</small></article>
+        <article class="dashboard-card"><span class="dashboard-icon">📦</span><h3>My Orders</h3><p>No orders yet</p><small>Your order history will appear here after checkout is connected.</small></article>
+      </div>
+    </section>
+
     <section class="hero">
       <div>
         <p class="eyebrow">WELCOME TO SAMMART</p>
