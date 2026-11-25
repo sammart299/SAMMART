@@ -13,6 +13,8 @@ const status = document.getElementById("account-status");
 const submitButton = document.getElementById("account-submit");
 const modeButton = document.getElementById("account-mode");
 const logoutButton = document.getElementById("account-logout");
+const dashboard = document.getElementById("customer-dashboard");
+const dashboardEmail = document.getElementById("dashboard-email");
 let createMode = false;
 
 modeButton.addEventListener("click", () => {
@@ -59,8 +61,12 @@ logoutButton.addEventListener("click", async () => {
 onAuthStateChanged(auth, (user) => {
   document.getElementById("account-signed-in").hidden = !user;
   form.hidden = !!user;
+  dashboard.hidden = !user;
   if (user) {
     document.getElementById("account-user").textContent = user.email || "Signed in";
+    dashboardEmail.textContent = user.email || "Email not available";
     status.textContent = "You are signed in.";
+  } else {
+    dashboardEmail.textContent = "";
   }
 });
