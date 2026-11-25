@@ -22,6 +22,20 @@
   </header>
 
   <main>
+
+    <section class="account-panel" aria-labelledby="account-title">
+      <div class="account-heading"><p class="eyebrow">CUSTOMER ACCOUNT</p><h2 id="account-title">Sign in or create an account</h2></div>
+      <form id="account-form" class="account-form">
+        <label for="account-email">Email address</label>
+        <input id="account-email" type="email" autocomplete="email" required placeholder="you@example.com">
+        <label for="account-password">Password</label>
+        <input id="account-password" type="password" autocomplete="current-password" minlength="6" required placeholder="At least 6 characters">
+        <button id="account-submit" type="submit">Sign in</button>
+        <button id="account-mode" class="secondary-button" type="button">New customer? Create account</button>
+      </form>
+      <div id="account-signed-in" hidden><p>Signed in as <strong id="account-user"></strong></p><button id="account-logout" type="button">Sign out</button></div>
+      <p id="account-status" class="account-status" role="status" aria-live="polite"></p>
+    </section>
     <section class="hero">
       <div>
         <p class="eyebrow">WELCOME TO SAMMART</p>
