@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SAMMART — Shop Everything. Shop Smart.">
+  <meta name="theme-color" content="#123b73">
+  <title>SAMMART | Shop Everything. Shop Smart.</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="SAMMART home">
+      <span class="brand-mark">S</span>
+      <span><strong>SAMMART</strong><small>Shop Everything. Shop Smart.</small></span>
+    </a>
+    <form class="search" id="search-form" role="search">
+      <input id="search-input" type="search" placeholder="Search products..." aria-label="Search products">
+      <button type="submit">Search</button>
+    </form>
+    <button class="cart-button" type="button" aria-label="Shopping cart">Cart <span id="cart-count">0</span></button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">WELCOME TO SAMMART</p>
+        <h1>Everything you need,<br><span>all in one place.</span></h1>
+        <p class="hero-copy">Discover products and enjoy a simple shopping experience.</p>
+        <a class="primary-link" href="#products">Explore products</a>
+      </div>
+      <div class="hero-art" aria-hidden="true"><span>SHOP</span><b>SMART</b><i>✦</i></div>
+    </section>
+
+    <section class="section-heading" id="products">
+      <div><p class="eyebrow">OUR COLLECTION</p><h2>Featured products</h2></div>
+      <p id="result-count" class="muted">Sample products</p>
+    </section>
+    <section class="product-grid" id="product-grid" aria-live="polite">
+      <article class="product-card">
+        <div class="product-placeholder">Product image</div>
+        <div class="product-info"><span class="category">Category</span><h3>Sample product</h3><p class="price">₹0.00</p><button class="add-button" type="button">Add to cart</button></div>
+      </article>
+    </section>
+    <p class="setup-note">Your product catalogue will appear here when the seller/admin product system is connected.</p>
+  </main>
+
+  <footer><strong>SAMMART</strong><span>Shop Everything. Shop Smart.</span><small>© <span id="year"></span> SAMMART. All rights reserved.</small></footer>
+  <script src="app.js"></script>
+</body>
+</html>
