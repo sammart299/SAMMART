@@ -44,6 +44,23 @@
       </div>
     </section>
 
+    <section id="checkout-panel" class="checkout-panel" hidden aria-labelledby="checkout-title">
+      <div class="checkout-heading"><p class="eyebrow">SECURE CHECKOUT DEMO</p><h2 id="checkout-title">Your cart</h2></div>
+      <div id="cart-items" class="cart-items"></div>
+      <p class="checkout-total">Demo total: <strong id="checkout-total">₹0.00</strong></p>
+      <form id="checkout-form" class="checkout-form">
+        <label for="checkout-name">Full name</label>
+        <input id="checkout-name" name="customerName" autocomplete="name" required maxlength="80">
+        <label for="checkout-phone">Phone number</label>
+        <input id="checkout-phone" name="phone" type="tel" autocomplete="tel" required minlength="10" maxlength="15" pattern="[0-9+ -]{10,15}">
+        <label for="checkout-address">Delivery address</label>
+        <textarea id="checkout-address" name="address" required minlength="10" maxlength="500"></textarea>
+        <button id="place-order" type="submit">Place demo order (no payment)</button>
+        <p id="checkout-status" role="status" aria-live="polite"></p>
+      </form>
+      <p class="demo-warning">Demo only: this does not collect payment or arrange delivery. Real payments, shipping, tax and server-side order validation must be connected before launch.</p>
+    </section>
+
     <section class="hero">
       <div>
         <p class="eyebrow">WELCOME TO SAMMART</p>
@@ -68,7 +85,7 @@
   </main>
 
   <footer><strong>SAMMART</strong><span>Shop Everything. Shop Smart.</span><small>© <span id="year"></span> SAMMART. All rights reserved.</small></footer>
-  <script src="app.js"></script>
+  <script type="module" src="app.js"></script>
   <script type="module" src="firebase.js"></script>
   <script type="module" src="auth.js"></script>
 </body>
