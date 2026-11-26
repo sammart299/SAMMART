@@ -105,6 +105,10 @@ async function loadCustomerOrders(user) {
   }
 }
 
+window.addEventListener("sammart-order-created", () => {
+  if (auth.currentUser) loadCustomerOrders(auth.currentUser);
+});
+
 onAuthStateChanged(auth, (user) => {
   document.getElementById("account-signed-in").hidden = !user;
   form.hidden = !!user;
