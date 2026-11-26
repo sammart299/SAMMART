@@ -39,9 +39,16 @@
     <section id="customer-dashboard" class="dashboard" hidden aria-labelledby="dashboard-title">
       <div class="dashboard-heading"><p class="eyebrow">MY SAMMART</p><h2 id="dashboard-title">Customer Dashboard</h2><p>Welcome to your customer account.</p></div>
       <div class="dashboard-grid">
-        <article class="dashboard-card"><span class="dashboard-icon">👤</span><h3>My Profile</h3><p id="dashboard-email" class="dashboard-email"></p><small>Your signed-in email address</small></article>
+        <article class="dashboard-card"><span class="dashboard-icon">👤</span><h3>My Profile</h3><p id="dashboard-email" class="dashboard-email"></p><small>Your signed-in email address</small><p class="uid-label">Account UID (for secure admin setup)</p><code id="account-uid" class="account-uid"></code><p id="account-role-message" class="role-message">Checking account role...</p></article>
         <article class="dashboard-card orders-card"><span class="dashboard-icon">📦</span><h3>My Orders</h3><p id="orders-message" class="orders-message">Loading your orders...</p><div id="orders-list" class="orders-list" aria-live="polite"></div><small>Recent orders placed from your SAMMART account.</small></article>
       </div>
+    </section>
+
+    <section id="admin-dashboard" class="admin-dashboard" hidden aria-labelledby="admin-title">
+      <div class="dashboard-heading"><p class="eyebrow">SAMMART MANAGEMENT</p><h2 id="admin-title">Admin Dashboard</h2><p>Review orders and update their status.</p></div>
+      <p id="admin-orders-message" class="orders-message" role="status">Loading orders...</p>
+      <div id="admin-orders-list" class="admin-orders-list"></div>
+      <p class="demo-warning">Admin access is granted only by a trusted project owner in Firebase. Do not share your account password or UID publicly.</p>
     </section>
 
     <section id="checkout-panel" class="checkout-panel" hidden aria-labelledby="checkout-title">
